@@ -1,0 +1,195 @@
+/* Variables */
+$maincolor: #8138a5;
+$darkcolor: #660066;
+$lightcolor: #bf8dd8;
+$link-color: #f15556;
+
+$dark-purple: #292438;
+$gradient-light: #f1555688;
+$gradient-dark: #29243888;
+
+/* Styles */
+html.landingpage,
+body.landingpage {
+    margin: 0;
+}
+
+//if a short landing page, make html full height
+html.short-lp {
+    height: 100%;
+}
+
+body.landingpage {
+    font-family: "Archivo Narrow", sans-serif;
+    color: $dark-purple;
+    background: #d7c9e2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* can be treated like a fallback */
+    background-color: #d7c9e2 !important;
+
+    /* will be "on top", if browser supports it */
+    background-image: linear-gradient(to bottom right, $gradient-light, $gradient-dark) !important;
+
+    /* these will reset other properties, like background-position, but it does know what you mean */
+    background: #d7c9e2 !important;
+    background: linear-gradient(to bottom right, $gradient-light, $gradient-dark) !important;
+
+    #welcomeBanner {
+        margin: 50px auto;
+        width: 70%;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border: solid $dark-purple 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 1007px;
+        }
+        a {
+            color: #f15556;
+        }
+
+        /* Small Mobile Screen */
+        @media screen and (max-width: 400px) {
+            width: 100%;
+            padding: 0px;
+            border-top: solid $dark-purple 2px;
+            border-bottom: solid $dark-purple 2px;
+            border-left: none;
+            border-right: none;
+            border-radius: 0px;
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+
+        // Main Landing Page
+        .welcome-wrapper {
+            .list{
+                list-style: none;
+                font-size: 25px;
+                width: 220px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-inline-start: 0;
+                position: relative;
+                &::before{
+                    content: "[{";
+                    color: $dark-purple;
+                    position: absolute;
+                    left: 0;
+                }
+                &::after{
+                    content: "}]";
+                    color: $dark-purple;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                li:not(:last-child) {
+                    &::after{
+                        content: ",";
+                        color: $dark-purple;
+                    }
+                }
+
+                //Different link text so the labels aren't read by a screenreader
+                &--linkedin::before {
+                    content: "LinkedIn: ";
+                }
+                &--blog::before {
+                    content: "Blog: ";
+                }
+                &--twitter::before {
+                    content: "Twitter: ";
+                }
+                &--github::before {
+                    content: "GitHub: ";
+                }
+                
+            }
+        }
+
+        // Resume Landing Page
+
+        .resume {
+            &-wrapper {
+                width: 100%;
+                &__header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    .logo {
+                        width: 150px;
+                        max-width: 150px;
+                        height: auto;
+                    }
+                }
+            }
+            &-body {
+                text-align: left;
+
+                p {
+                    text-align: center;
+                }
+
+                //First Level list
+                ul {
+                    li {
+                        margin-left: 20px;
+
+                        //Second Level
+                        ul {
+                            display: flex;
+                            flex-wrap: wrap;
+                            padding-inline-start: 20px;
+
+                            @media screen and (max-width: 400px) {
+                                flex-direction: column;
+                            }
+
+                            li {
+                                margin-left: 10px;
+                                max-width: 200px;
+                            }
+
+                            //Third Level
+                            ul {
+                                flex-direction: column;
+                            }
+                        }
+                    }
+                }
+            }
+            &-list {
+                &--column {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+/* https://css-tricks.com/css3-gradients/ */
+.gradient {
+    /* can be treated like a fallback */
+    background-color: #d7c9e2;
+
+    /* will be "on top", if browser supports it */
+    background-image: linear-gradient(to bottom right, $gradient-light, $gradient-dark);
+
+    /* these will reset other properties, like background-position, but it does know what you mean */
+    background: #d7c9e2;
+    background: linear-gradient(to bottom right, $gradient-light, $gradient-dark);
+}
