@@ -1,82 +1,55 @@
 /*
- * Theme Name:  Computational Chimera
- * Theme URI:   Https://wordpress.org/themes/twentyfifteen
- * Author: Brittany Kelly
- * Author URI: github.com/compchimera
- * Template: twentyfifteen
- * Version 0.1.0
+ * Main styles for child Comp Chimera theme.
  * */
-:root {
-	--maincolor:  #8138a5;
-	--darkcolor: #660066;
-	--lightcolor: #bf8dd8;
-	--link-color: #f15556;
-}
-
 /**
 Various text color assignments
 */
+p {
+  color: #660066; }
 
-	p {
-		color: var(--darkcolor);
-	}
+.wp-caption-text {
+  color: #bf8dd8; }
 
-	 .wp-caption-text {
-		color: var(--lightcolor);
-	 }
+/* Link colors */
+h1 {
+  color: #8138a5; }
 
-	 /* Link colors */
+h2 a,
+h3 a {
+  color: #f15556;
+  -moz-text-decoration-color: #f15556;
+  /* Code for Firefox */
+  text-decoration-color: #f15556; }
 
-	h1 {
-		color: var(--maincolor);
-	}
+/* Input place holder color */
+::-webkit-input-placeholder {
+  color: #bf8dd8; }
 
-	h2 a, h3 a{
-		color: var(--link-color);
-		-moz-text-decoration-color: var(--link-color); /* Code for Firefox */
-    	text-decoration-color: var(--link-color);
-	 }
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #bf8dd8; }
 
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #bf8dd8; }
 
+:-ms-input-placeholder {
+  color: #bf8dd8; }
 
+/* hide the icon in mobile view. Parent is coded mobile first */
+.custom-logo-link {
+  display: none; }
 
-	/* Input place holder color */
-	::-webkit-input-placeholder {
-	   color: var(--lightcolor);
-	}
+@media screen and (min-width: 59.6875em) {
+  .custom-logo-link {
+    display: block; } }
 
-	:-moz-placeholder { /* Firefox 18- */
-	   color: var(--lightcolor);  
-	}
-
-	::-moz-placeholder {  /* Firefox 19+ */
-	   color: var(--lightcolor);  
-	}
-
-	:-ms-input-placeholder {  
-	   color: var(--lightcolor);  
-	}
-
-	/* hide the icon in mobile view. Parent is coded mobile first */
-	.custom-logo-link{
-		display:none;
-	}
-	@media screen and (min-width: 59.6875em){
-		.custom-logo-link{
-			display:block;
-		}
-	}
-
-
-	/* Background Colors*/
-	body{
-		/* can be treated like a fallback */
-		background-color: #f15556 !important;
-	
-		/* will be "on top", if browser supports it */
-		background-image: linear-gradient(to bottom right, #f1555688, #29243888) !important;
-	
-		/* these will reset other properties, like background-position, but it does know what you mean */
-		background: #f15556 !important;
-		background: linear-gradient(to bottom right, #f1555688, #29243888) !important;
-	}
+/* Background Colors*/
+body.blog {
+  /* can be treated like a fallback */
+  background-color: #f15556 !important;
+  /* will be "on top", if browser supports it */
+  background-image: linear-gradient(to bottom right, #f1555688, #29243888) !important;
+  /* these will reset other properties, like background-position, but it does know what you mean */
+  background: #f15556 !important;
+  background: linear-gradient(to bottom right, #f1555688, #29243888) !important; }
