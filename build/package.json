@@ -1,5 +1,9 @@
 {
   "name": "computationalchimera",
+  "scripts" : {
+    "build": "grunt build",
+    "dev": "grunt"
+  },
   "version": "1.0.0",
   "description": "Computational Chimera Child Theme",
   "author": "Brittany Kelly <hi@computationalchimera.ca> (https://computationalchimera.ca)",
