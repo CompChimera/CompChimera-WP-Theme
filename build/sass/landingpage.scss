@@ -16,10 +16,12 @@ body.landingpage {
 
 //if a short landing page, make html full height
 html.short-lp {
-    height: 100%;
+    min-height: 100%;
 }
 
 body.landingpage {
+
+    // Util / Base
     font-family: "Archivo Narrow", sans-serif;
     color: $dark-purple;
     background: #d7c9e2;
@@ -37,6 +39,58 @@ body.landingpage {
     background: #d7c9e2 !important;
     background: linear-gradient(to bottom right, $gradient-light, $gradient-dark) !important;
 
+    // Navigation
+    //Navigation
+    .main-nav {
+        // https://cssgradient.io/gradient-backgrounds/
+        background-color: #8EC5FC;
+        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        color: $dark-purple;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+        // flex: 1 1 0;
+        // flex-direction: row;
+        // width: 100%;
+        border-bottom: 1px solid white;
+        position: relative;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: inline-block;
+            max-width: 200px;
+            background: $link-color;
+            border-radius: 6px;
+            border-color: $dark-purple;
+            padding: 20px;
+        }
+
+        &::before{
+            content: "[{";
+            color: $dark-purple;
+            position: absolute;
+            left: 0;
+            font-size: 40px;
+        }
+        &::after{
+            content: "}]";
+            color: $dark-purple;
+            position: absolute;
+            right: 30px;
+            bottom: 0;
+            font-size: 40px;
+        }
+
+
+    }
+
+    // Welcome block
     #welcomeBanner {
         margin: 50px auto;
         width: 70%;
@@ -60,7 +114,7 @@ body.landingpage {
         /* Small Mobile Screen */
         @media screen and (max-width: 400px) {
             width: 100%;
-            padding: 0px;
+            padding-left: 0px;
             border-top: solid $dark-purple 2px;
             border-bottom: solid $dark-purple 2px;
             border-left: none;
@@ -72,6 +126,7 @@ body.landingpage {
         }
 
         // Main Landing Page
+        //Welcome Banner
         .welcome-wrapper {
             .list{
                 list-style: none;
@@ -116,6 +171,16 @@ body.landingpage {
                     content: "GitHub: ";
                 }
                 
+            }
+
+            .headshot-img {
+                max-width: 400px;
+            }
+
+               /* Small Mobile Screen */
+            @media screen and (max-width: 400px) {
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
 
@@ -192,4 +257,6 @@ body.landingpage {
     /* these will reset other properties, like background-position, but it does know what you mean */
     background: #d7c9e2;
     background: linear-gradient(to bottom right, $gradient-light, $gradient-dark);
+
+    background-attachment: fixed; /*edit*/
 }

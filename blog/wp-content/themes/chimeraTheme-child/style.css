@@ -1,4 +1,13 @@
 /*
+ * Theme Name:  Computational Chimera
+ * Theme URI:   Https://wordpress.org/themes/twentyfifteen
+ * Author: Brittany Kelly
+ * Author URI: github.com/compchimera
+ * Template: twentyfifteen
+ * Version 0.1.0
+ * Main styles for child Comp Chimera theme.
+ * */
+/*
  * Main styles for child Comp Chimera theme.
  * */
 /**
@@ -45,11 +54,12 @@ h3 a {
     display: block; } }
 
 /* Background Colors*/
-body.blog {
+body {
   /* can be treated like a fallback */
   background-color: #f15556 !important;
   /* will be "on top", if browser supports it */
   background-image: linear-gradient(to bottom right, #f1555688, #29243888) !important;
   /* these will reset other properties, like background-position, but it does know what you mean */
   background: #f15556 !important;
-  background: linear-gradient(to bottom right, #f1555688, #29243888) !important; }
+  background: linear-gradient(to bottom right, #f1555688, #29243888) !important;
+  height: 100vh; }

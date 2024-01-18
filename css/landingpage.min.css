@@ -5,7 +5,7 @@ body.landingpage {
   margin: 0; }
 
 html.short-lp {
-  height: 100%; }
+  min-height: 100%; }
 
 body.landingpage {
   font-family: "Archivo Narrow", sans-serif;
@@ -21,6 +21,40 @@ body.landingpage {
   /* these will reset other properties, like background-position, but it does know what you mean */
   background: #d7c9e2 !important;
   background: linear-gradient(to bottom right, #f1555688, #29243888) !important; }
+  body.landingpage .main-nav {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    color: #292438;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    border-bottom: 1px solid white;
+    position: relative; }
+    body.landingpage .main-nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+    body.landingpage .main-nav li {
+      display: inline-block;
+      max-width: 200px;
+      background: #f15556;
+      border-radius: 6px;
+      border-color: #292438;
+      padding: 20px; }
+    body.landingpage .main-nav::before {
+      content: "[{";
+      color: #292438;
+      position: absolute;
+      left: 0;
+      font-size: 40px; }
+    body.landingpage .main-nav::after {
+      content: "}]";
+      color: #292438;
+      position: absolute;
+      right: 30px;
+      bottom: 0;
+      font-size: 40px; }
   body.landingpage #welcomeBanner {
     margin: 50px auto;
     width: 70%;
@@ -41,7 +75,7 @@ body.landingpage {
     @media screen and (max-width: 400px) {
       body.landingpage #welcomeBanner {
         width: 100%;
-        padding: 0px;
+        padding-left: 0px;
         border-top: solid #292438 2px;
         border-bottom: solid #292438 2px;
         border-left: none;
@@ -49,36 +83,44 @@ body.landingpage {
         border-radius: 0px; }
         body.landingpage #welcomeBanner h1 {
           font-size: 1.5em; } }
-    body.landingpage #welcomeBanner .welcome-wrapper .list {
-      list-style: none;
-      font-size: 25px;
-      width: 220px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-inline-start: 0;
-      position: relative; }
-      body.landingpage #welcomeBanner .welcome-wrapper .list::before {
-        content: "[{";
-        color: #292438;
-        position: absolute;
-        left: 0; }
-      body.landingpage #welcomeBanner .welcome-wrapper .list::after {
-        content: "}]";
-        color: #292438;
-        position: absolute;
-        right: 0;
-        bottom: 0; }
-      body.landingpage #welcomeBanner .welcome-wrapper .list li:not(:last-child)::after {
-        content: ",";
-        color: #292438; }
-      body.landingpage #welcomeBanner .welcome-wrapper .list--linkedin::before {
-        content: "LinkedIn: "; }
-      body.landingpage #welcomeBanner .welcome-wrapper .list--blog::before {
-        content: "Blog: "; }
-      body.landingpage #welcomeBanner .welcome-wrapper .list--twitter::before {
-        content: "Twitter: "; }
-      body.landingpage #welcomeBanner .welcome-wrapper .list--github::before {
-        content: "GitHub: "; }
+    body.landingpage #welcomeBanner .welcome-wrapper {
+      /* Small Mobile Screen */ }
+      body.landingpage #welcomeBanner .welcome-wrapper .list {
+        list-style: none;
+        font-size: 25px;
+        width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-inline-start: 0;
+        position: relative; }
+        body.landingpage #welcomeBanner .welcome-wrapper .list::before {
+          content: "[{";
+          color: #292438;
+          position: absolute;
+          left: 0; }
+        body.landingpage #welcomeBanner .welcome-wrapper .list::after {
+          content: "}]";
+          color: #292438;
+          position: absolute;
+          right: 0;
+          bottom: 0; }
+        body.landingpage #welcomeBanner .welcome-wrapper .list li:not(:last-child)::after {
+          content: ",";
+          color: #292438; }
+        body.landingpage #welcomeBanner .welcome-wrapper .list--linkedin::before {
+          content: "LinkedIn: "; }
+        body.landingpage #welcomeBanner .welcome-wrapper .list--blog::before {
+          content: "Blog: "; }
+        body.landingpage #welcomeBanner .welcome-wrapper .list--twitter::before {
+          content: "Twitter: "; }
+        body.landingpage #welcomeBanner .welcome-wrapper .list--github::before {
+          content: "GitHub: "; }
+      body.landingpage #welcomeBanner .welcome-wrapper .headshot-img {
+        max-width: 400px; }
+      @media screen and (max-width: 400px) {
+        body.landingpage #welcomeBanner .welcome-wrapper {
+          padding-left: 10px;
+          padding-right: 10px; } }
     body.landingpage #welcomeBanner .resume-wrapper {
       width: 100%; }
       body.landingpage #welcomeBanner .resume-wrapper__header {
@@ -119,4 +161,6 @@ body.landingpage {
   background-image: linear-gradient(to bottom right, #f1555688, #29243888);
   /* these will reset other properties, like background-position, but it does know what you mean */
   background: #d7c9e2;
-  background: linear-gradient(to bottom right, #f1555688, #29243888); }
+  background: linear-gradient(to bottom right, #f1555688, #29243888);
+  background-attachment: fixed;
+  /*edit*/ }

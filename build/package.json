@@ -4,6 +4,10 @@
   "description": "Computational Chimera Child Theme",
   "author": "Brittany Kelly <hi@computationalchimera.ca> (https://computationalchimera.ca)",
   "license": "ISC",
+  "scripts": {
+    "build": "grunt build",
+    "dev": "grunt default"
+  },
   "dependencies": {
     "autoprefixer": "^9.8.0",
     "grunt": "^1.1.0",
