@@ -22,20 +22,20 @@ html.short-lp {
 body.landingpage {
     font-family: "Archivo Narrow", sans-serif;
     color: $dark-purple;
-    background: #d7c9e2;
+    // background: #d7c9e2;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     /* can be treated like a fallback */
-    background-color: #d7c9e2 !important;
+    // background-color: #d7c9e2 !important;
 
     /* will be "on top", if browser supports it */
-    background-image: linear-gradient(to bottom right, $gradient-light, $gradient-dark) !important;
+    // background-image: linear-gradient(to bottom right, $gradient-light, $gradient-dark) !important;
 
     /* these will reset other properties, like background-position, but it does know what you mean */
-    background: #d7c9e2 !important;
-    background: linear-gradient(to bottom right, $gradient-light, $gradient-dark) !important;
+    // background: #d7c9e2 !important;
+    // background: linear-gradient(to bottom right, $gradient-light, $gradient-dark) !important;
 
     #welcomeBanner {
         margin: 50px auto;
@@ -192,4 +192,5 @@ body.landingpage {
     /* these will reset other properties, like background-position, but it does know what you mean */
     background: #d7c9e2;
     background: linear-gradient(to bottom right, $gradient-light, $gradient-dark);
+    background-attachment: fixed;
 }
