@@ -50,7 +50,7 @@ h3 a {
     display: block; } }
 
 /* Background Colors*/
-body.blog {
+body.blog, body {
   /* can be treated like a fallback */
   background-color: #f15556 !important;
   /* will be "on top", if browser supports it */
