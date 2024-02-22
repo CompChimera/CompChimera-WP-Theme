@@ -10,51 +10,61 @@
 Various text color assignments
 */
 p {
-  color: #660066; }
+  color: #660066;
+}
 
 .wp-caption-text {
-  color: #bf8dd8; }
+  color: #bf8dd8;
+}
 
 /* Link colors */
 h1 {
-  color: #8138a5; }
+  color: #8138a5;
+}
 
 h2 a,
 h3 a {
   color: #f15556;
-  -moz-text-decoration-color: #f15556;
-  /* Code for Firefox */
-  text-decoration-color: #f15556; }
+  -moz-text-decoration-color: #f15556; /* Code for Firefox */
+  text-decoration-color: #f15556;
+}
 
 /* Input place holder color */
 ::-webkit-input-placeholder {
-  color: #bf8dd8; }
+  color: #bf8dd8;
+}
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #bf8dd8; }
+  color: #bf8dd8;
+}
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #bf8dd8; }
+  color: #bf8dd8;
+}
 
 :-ms-input-placeholder {
-  color: #bf8dd8; }
+  color: #bf8dd8;
+}
 
 /* hide the icon in mobile view. Parent is coded mobile first */
 .custom-logo-link {
-  display: none; }
+  display: none;
+}
 
 @media screen and (min-width: 59.6875em) {
   .custom-logo-link {
-    display: block; } }
-
+    display: block;
+  }
+}
 /* Background Colors*/
 body.blog, body {
   /* can be treated like a fallback */
   background-color: #f15556 !important;
   /* will be "on top", if browser supports it */
-  background-image: linear-gradient(to bottom right, #f1555688, #29243888) !important;
+  background-image: linear-gradient(to bottom right, rgba(241, 85, 86, 0.5333333333), rgba(41, 36, 56, 0.5333333333)) !important;
   /* these will reset other properties, like background-position, but it does know what you mean */
   background: #f15556 !important;
-  background: linear-gradient(to bottom right, #f1555688, #29243888) !important; }
+  background: linear-gradient(to bottom right, rgba(241, 85, 86, 0.5333333333), rgba(41, 36, 56, 0.5333333333)) !important;
+}
