@@ -9,8 +9,12 @@
 /**
 Various text color assignments
 */
-p {
+p, ul, li {
   color: #660066;
+}
+
+li {
+  margin-left: 30px;
 }
 
 .wp-caption-text {

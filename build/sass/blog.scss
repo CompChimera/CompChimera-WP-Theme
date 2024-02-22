@@ -17,8 +17,12 @@ $link-color: #f15556;
 Various text color assignments
 */
 
-p {
+p, ul, li {
 	color: $darkcolor;
+}
+
+li {
+	margin-left: 30px;
 }
 
 .wp-caption-text {
