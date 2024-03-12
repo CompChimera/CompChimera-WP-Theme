@@ -21,16 +21,17 @@ body.landingpage {
   /* these will reset other properties, like background-position, but it does know what you mean */
 }
 body.landingpage #welcomeBanner {
-  margin: 50px auto;
-  width: 70%;
+  align-items: center;
   background-color: white;
   border-radius: 10px;
   border: solid #292438 2px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 50px auto;
+  padding: 10px;
   text-align: center;
+  width: 70%;
   /* Small Mobile Screen */
 }
 body.landingpage #welcomeBanner img {
@@ -64,10 +65,10 @@ body.landingpage #welcomeBanner .welcome-wrapper .list {
   position: relative;
 }
 body.landingpage #welcomeBanner .welcome-wrapper .list::before {
-  content: "[{";
+  content: "[{ ";
   color: #292438;
   position: absolute;
-  left: 0;
+  left: -5px;
 }
 body.landingpage #welcomeBanner .welcome-wrapper .list::after {
   content: "}]";
@@ -91,6 +92,9 @@ body.landingpage #welcomeBanner .welcome-wrapper .list--twitter::before {
 }
 body.landingpage #welcomeBanner .welcome-wrapper .list--github::before {
   content: "GitHub: ";
+}
+body.landingpage #welcomeBanner .welcome-wrapper .list--about::before {
+  content: "About: ";
 }
 body.landingpage #welcomeBanner .resume-wrapper {
   width: 100%;
