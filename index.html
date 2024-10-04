@@ -4,40 +4,61 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Computational Chimera</title>
-	<meta name="description" content="Brittany Kelly is a software developer from Halifax, Nova Scotia looking for new opportunities." />
+	<meta name="description"
+		content="Brittany Kelly is a software developer from Halifax, Nova Scotia looking for new opportunities." />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--Change font call to be local-->
 	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet" type="text/css" />
 	<link href="./css/landingpage.min.css" rel="stylesheet" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BFVR3PSNKD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script src="./scripts/landing.js"></script>
 
-  gtag('config', 'G-BFVR3PSNKD');
-</script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BFVR3PSNKD"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-BFVR3PSNKD');
+	</script>
 </head>
 
 <body class="gradient landingpage">
 
-	<div id="welcomeBanner">
-		<div class="welcome-wrapper"><a href="/blog/"><img alt="Computational Chimera site header with chimera head and paw prints and hoof prints" src="./images/CompChimera_Wide_Header.png" /></a>
-			<h1>Welcome to Computational Chimera! The site and portfolio of Brittany. </h1>
-			<p>Please excuse the construction, I'm working on updating my landing page and blog theme while I'm newly on the job hunt.</p>
+	<div class="welcomeBanner">
+		<div class="welcome-wrapper">
+			<!-- <a href="/blog/">
+			<img alt="Computational Chimera site header with chimera head and paw prints and hoof prints" src="./images/CompChimera_Wide_Header.png" />
+		</a> -->
+			<h1>Welcome to Computational Chimera! <br> The site and portfolio of Brittany. </h1>
+			<p>Technologist experienced in digging through CMS code, collaborating to get solutions to problems, and being
+				finding any excuse to add cats to a project.</p>
 			<p>Below are links to visit my blog, or social
-				media while I'm rebuilding the rest of the site content. Please see my <a rel="nofollow" href="https://www.linkedin.com/in/brittanykelly/">LinkedIn</a> for my work history, and keep an eye on <a href="https://github.com/CompChimera/" rel="nofollow" >GitHub</a> as I build my portfolio. 
+				media. Please see my <a rel="nofollow" href="https://www.linkedin.com/in/brittanykelly/">LinkedIn</a> for my
+				work history, and keep an eye on <a href="https://github.com/CompChimera/" rel="nofollow">GitHub</a> as I expand
+				my portfolio.
 				<br>
-				Thanks for visiting!</p>
+				Thanks for visiting!
+			</p>
 
-			<ul class="list">
-				<li class="list--about"><a href="/blog/about/">About Brittany</a></li>
-				<li class="list--blog"><a href="/blog/">Blog Link</a></li>
-				<li class="list--linkedin"><a href="https://www.linkedin.com/in/brittanykelly/" rel="nofollow" >LinkedIn Link</a></li>
-				<li class="list--twitter"><a href="https://www.twitter.com/compchimera/" rel="nofollow" >Twitter Link</a></li>
-				<li class="list--github"><a href="https://github.com/CompChimera/" rel="nofollow" >GitHub Link</a></li>
-			</ul>
+			<div class="floater floatin" id="floater-wrapper">
+				<ul class="floater-list--wrapper">
+					<li class="floater-list-item"><a class="floater-list-link" href="/blog/about/">About</a></li>
+					<li class="floater-list-item"><a class="floater-list-link" href="/blog/">Blog</a></li>
+					<li class="floater-list-item"><a class="floater-list-link" href="/blog/code-projects/">Code Projects</a></li>
+					<li class="floater-list-item"><a class="floater-list-link" href="https://github.com/CompChimera/"
+							rel="nofollow">GitHub</a></li>
+					<li class="floater-list-item"><a class="floater-list-link" href="https://www.linkedin.com/in/brittanykelly/"
+							rel="nofollow">Linkedin</a></li>
+					<li class="floater-list-item"><a class="floater-list-link" href="https://codepen.io/compchimera/"
+							rel="nofollow">CodePen</a></li>
+				</ul>
+				<img class="logo"
+					src="https://computationalchimera.ca/blog/wp-content/uploads/2023/04/cropped-screenshot_scaled.png"
+					alt="Computational Chimera logo - silhouette of a lion head with horns" />
+			</div>
+			<button id="float-switch" class="float-switch on">Toggle logo and link float</button>
+
 		</div>
 	</div>
 </body>

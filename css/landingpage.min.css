@@ -20,7 +20,7 @@ body.landingpage {
   /* will be "on top", if browser supports it */
   /* these will reset other properties, like background-position, but it does know what you mean */
 }
-body.landingpage #welcomeBanner {
+body.landingpage .welcomeBanner {
   align-items: center;
   background-color: white;
   border-radius: 10px;
@@ -29,33 +29,32 @@ body.landingpage #welcomeBanner {
   display: flex;
   justify-content: center;
   margin: 50px auto;
-  padding: 10px;
+  padding: 10px 50px;
   text-align: center;
   width: 70%;
   /* Small Mobile Screen */
 }
-body.landingpage #welcomeBanner img {
-  width: 100%;
-  max-width: 1007px;
-}
-body.landingpage #welcomeBanner a {
+body.landingpage .welcomeBanner a {
   color: #f15556;
 }
+body.landingpage .welcomeBanner p {
+  font-size: 21px;
+}
 @media screen and (max-width: 400px) {
-  body.landingpage #welcomeBanner {
+  body.landingpage .welcomeBanner {
     width: 100%;
     padding: 5px;
     border-top: solid #292438 2px;
     border-bottom: solid #292438 2px;
   }
-  body.landingpage #welcomeBanner h1 {
+  body.landingpage .welcomeBanner h1 {
     font-size: 1.5em;
   }
-  body.landingpage #welcomeBanner img {
+  body.landingpage .welcomeBanner img {
     width: 90%;
   }
 }
-body.landingpage #welcomeBanner .welcome-wrapper .list {
+body.landingpage .welcomeBanner .welcome-wrapper .list {
   list-style: none;
   font-size: 25px;
   width: 220px;
@@ -64,74 +63,74 @@ body.landingpage #welcomeBanner .welcome-wrapper .list {
   padding-inline-start: 0;
   position: relative;
 }
-body.landingpage #welcomeBanner .welcome-wrapper .list::before {
+body.landingpage .welcomeBanner .welcome-wrapper .list::before {
   content: "[{ ";
   color: #292438;
   position: absolute;
   left: -5px;
 }
-body.landingpage #welcomeBanner .welcome-wrapper .list::after {
+body.landingpage .welcomeBanner .welcome-wrapper .list::after {
   content: "}]";
   color: #292438;
   position: absolute;
   right: 0;
   bottom: 0;
 }
-body.landingpage #welcomeBanner .welcome-wrapper .list li:not(:last-child)::after {
+body.landingpage .welcomeBanner .welcome-wrapper .list li:not(:last-child)::after {
   content: ",";
   color: #292438;
 }
-body.landingpage #welcomeBanner .welcome-wrapper .list--linkedin::before {
+body.landingpage .welcomeBanner .welcome-wrapper .list--linkedin::before {
   content: "LinkedIn: ";
 }
-body.landingpage #welcomeBanner .welcome-wrapper .list--blog::before {
+body.landingpage .welcomeBanner .welcome-wrapper .list--blog::before {
   content: "Blog: ";
 }
-body.landingpage #welcomeBanner .welcome-wrapper .list--twitter::before {
+body.landingpage .welcomeBanner .welcome-wrapper .list--twitter::before {
   content: "Twitter: ";
 }
-body.landingpage #welcomeBanner .welcome-wrapper .list--github::before {
+body.landingpage .welcomeBanner .welcome-wrapper .list--github::before {
   content: "GitHub: ";
 }
-body.landingpage #welcomeBanner .welcome-wrapper .list--about::before {
+body.landingpage .welcomeBanner .welcome-wrapper .list--about::before {
   content: "About: ";
 }
-body.landingpage #welcomeBanner .resume-wrapper {
+body.landingpage .welcomeBanner .resume-wrapper {
   width: 100%;
 }
-body.landingpage #welcomeBanner .resume-wrapper__header {
+body.landingpage .welcomeBanner .resume-wrapper__header {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body.landingpage #welcomeBanner .resume-wrapper__header .logo {
+body.landingpage .welcomeBanner .resume-wrapper__header .logo {
   width: 150px;
   max-width: 150px;
   height: auto;
 }
-body.landingpage #welcomeBanner .resume-body {
+body.landingpage .welcomeBanner .resume-body {
   text-align: left;
 }
-body.landingpage #welcomeBanner .resume-body p {
+body.landingpage .welcomeBanner .resume-body p {
   text-align: center;
 }
-body.landingpage #welcomeBanner .resume-body ul li {
+body.landingpage .welcomeBanner .resume-body ul li {
   margin-left: 20px;
 }
-body.landingpage #welcomeBanner .resume-body ul li ul {
+body.landingpage .welcomeBanner .resume-body ul li ul {
   display: flex;
   flex-wrap: wrap;
   padding-inline-start: 20px;
 }
-body.landingpage #welcomeBanner .resume-body ul li ul li {
+body.landingpage .welcomeBanner .resume-body ul li ul li {
   margin-left: 10px;
   max-width: 200px;
 }
-body.landingpage #welcomeBanner .resume-body ul li ul ul {
+body.landingpage .welcomeBanner .resume-body ul li ul ul {
   flex-direction: column;
 }
-body.landingpage #welcomeBanner .resume-list--column {
+body.landingpage .welcomeBanner .resume-list--column {
   flex-direction: column;
 }
 
@@ -145,4 +144,149 @@ body.landingpage #welcomeBanner .resume-list--column {
   background: #d7c9e2;
   background: linear-gradient(to bottom right, rgba(241, 85, 86, 0.5333333333), rgba(41, 36, 56, 0.5333333333));
   background-attachment: fixed;
+}
+
+/* Base */
+:root {
+  --light-pink: rgba(241, 85, 86, 0.5333333333);
+  --salmon: rgb(253 211 211 / 75%);
+  --purple: #660066;
+  --light-purple: rgba(41, 36, 56, 0.5333333333);
+  --md-purple: rgba(41, 36, 56, 0.3333333333);
+  --bg-light-purple: rgba(41, 36, 56, 0.1);
+}
+
+.floater {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  /*   https://css-tricks.com/snippets/sass/placing-items-circle/ */
+  min-height: 300px;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(0deg) translate(0, 0px);
+  }
+  100% {
+    transform: rotate(1deg) translate(3px, -3px);
+  }
+}
+@keyframes sway-opposite {
+  0% {
+    transform: rotate(0deg) translate(0, 0px);
+  }
+  50% {
+    transform: rotate(0deg) translate(-2px, -2px);
+  }
+  100% {
+    transform: rotate(-1deg) translate(-5px, 5px);
+  }
+}
+.floater a.floater-list-link {
+  text-decoration: none;
+  color: unset;
+}
+.floater ul.floater-list--wrapper {
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 21px;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+.floater li.floater-list-item {
+  border: 1px solid transparent;
+  height: 20px;
+  font-size: 20px;
+  padding: 5px;
+  background-color: var(--salmon);
+  border-radius: 3px;
+  text-align: center;
+  transition: 0.3s;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+.floater li:hover {
+  color: var(--purple);
+  border: 1px solid #292438;
+}
+.floater li:hover a {
+  color: var(--purple);
+  color: #f15556;
+  text-shadow: 0px 1px 1px #660066;
+}
+.floater img.logo {
+  max-width: 248px;
+}
+.floater.floatin ul.floater-list--wrapper {
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  position: absolute;
+  row-gap: 38px;
+  column-gap: 21px;
+  z-index: 2;
+}
+.floater.floatin li.floater-list-item {
+  animation: sway 3s ease-in-out infinite alternate;
+}
+.floater.floatin li:nth-child(1) {
+  grid-column: 1/4;
+  margin: auto;
+}
+.floater.floatin li:nth-child(2) {
+  grid-column: 1;
+}
+.floater.floatin li:nth-child(3) {
+  grid-column: 3;
+}
+.floater.floatin li:nth-child(4) {
+  grid-column: 1;
+}
+.floater.floatin li:nth-child(5) {
+  grid-column: 3;
+}
+.floater.floatin li:nth-child(6) {
+  grid-column: 1/4;
+  margin: auto;
+}
+.floater.floatin .logo {
+  animation: sway-opposite 3s ease-in-out infinite alternate;
+}
+
+.float-switch {
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+.float-switch:hover, .float-switch:focus, .float-switch:active {
+  border: 1px solid #214631;
+  box-shadow: 0px 2px 7px #2b1039;
+  text-shadow: rgba(255, 255, 255, 0.3333333333) 1px 1px 7px;
+}
+.float-switch.on {
+  background-color: #478f67;
+}
+.float-switch.off {
+  background-color: grey;
 }
