@@ -163,10 +163,10 @@ body.landingpage .welcomeBanner .resume-list--column {
   width: max-content;
   /*   https://css-tricks.com/snippets/sass/placing-items-circle/ */
   min-height: 300px;
-  -webkit-transition: all 1s linear;
-  -moz-transition: all 1s linear;
-  -o-transition: all 1s linear;
-  transition: all 1s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 @keyframes sway {
@@ -201,16 +201,14 @@ body.landingpage .welcomeBanner .resume-list--column {
   grid-auto-flow: column;
   justify-content: center;
   gap: 21px;
-  -webkit-transition: all 1s linear;
-  -moz-transition: all 1s linear;
-  -o-transition: all 1s linear;
-  transition: all 1s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 .floater li.floater-list-item {
   border: 1px solid transparent;
-  height: 20px;
   font-size: 20px;
-  padding: 5px;
   background-color: var(--salmon);
   border-radius: 3px;
   text-align: center;
@@ -219,6 +217,9 @@ body.landingpage .welcomeBanner .resume-list--column {
   display: flex;
   align-items: center;
 }
+.floater li.floater-list-item a {
+  padding: 5px;
+}
 .floater li:hover {
   color: var(--purple);
   border: 1px solid #292438;
@@ -226,7 +227,7 @@ body.landingpage .welcomeBanner .resume-list--column {
 .floater li:hover a {
   color: var(--purple);
   color: #f15556;
-  text-shadow: 0px 1px 1px #660066;
+  text-shadow: 0px 1px 1px #614c61;
 }
 .floater img.logo {
   max-width: 248px;

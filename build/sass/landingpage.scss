@@ -222,10 +222,10 @@ body.landingpage {
     width: max-content;
     /*   https://css-tricks.com/snippets/sass/placing-items-circle/ */
     min-height: 300px;
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
 
 @keyframes sway {
@@ -264,17 +264,15 @@ body.landingpage {
         grid-auto-flow: column;
         justify-content: center;
         gap: 21px;
-        -webkit-transition: all 1s linear;
-        -moz-transition: all 1s linear;
-        -o-transition: all 1s linear;
-        transition: all 1s linear;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
     }
 
     li.floater-list-item {
         border: 1px solid transparent;
-        height: 20px;
         font-size: 20px;
-        padding: 5px;
         background-color: var(--salmon);
         border-radius: 3px;
         text-align: center;
@@ -282,6 +280,10 @@ body.landingpage {
         width: fit-content;
         display: flex;
         align-items: center;
+
+        a {
+            padding: 5px;
+        }
     }
 
     li:hover {
@@ -291,7 +293,7 @@ body.landingpage {
         a {
             color: var(--purple);
             color: #f15556;
-            text-shadow: 0px 1px 1px #660066;
+            text-shadow: 0px 1px 1px #614c61;
         }
     }
 
