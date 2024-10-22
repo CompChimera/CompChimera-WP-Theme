@@ -4,34 +4,40 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Page Not Found | Computational Chimera</title>
-	<meta name="description" content="Brittany Kelly is a software developer from Halifax, Nova Scotia looking for new opportunities." />
+	<meta name="description"
+		content="Brittany Kelly is a software developer from Halifax, Nova Scotia looking for new opportunities." />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--Change font call to be local-->
 	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet" type="text/css" />
 	<link href="./css/landingpage.min.css" rel="stylesheet" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BFVR3PSNKD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BFVR3PSNKD"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-  gtag('config', 'G-BFVR3PSNKD');
-</script>
+		gtag('config', 'G-BFVR3PSNKD');
+	</script>
+	<!-- Icons -->
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<link rel="icon" type="image/png" href="https://example.com/favicon.png" />
 </head>
 
 <body class="gradient landingpage">
 	<div id="welcomeBanner">
 		<div class="welcome-wrapper">
 			<h1>Page Not Found</h1>
-			<img alt="Kitten inside desktop computer asking 'srry, but wut king o bug is I sposed to be looking for?'" src="./images/404.jpeg" />
+			<img alt="Kitten inside desktop computer asking 'srry, but wut king o bug is I sposed to be looking for?'"
+				src="./images/404.jpeg" />
 			<p>Other pages to check out while our technicians are looking into this broken link:</p>
-			<ul class="list"> 
+			<ul class="list">
 				<li class="list--about"><a href="/blog/about/">About Brittany</a></li>
 				<li class="list--blog"><a href="/blog">Blog Link</a></li>
-				<li class="list--linkedin"><a href="https://www.linkedin.com/in/brittanykelly/" rel="nofollow" >LinkedIn Link</a></li>
-				<li class="list--twitter"><a href="https://www.twitter.com/compchimera" rel="nofollow" >Twitter Link</a></li>
-				<li class="list--github"><a href="https://github.com/CompChimera" rel="nofollow" >GitHub Link</a></li>
+				<li class="list--linkedin"><a href="https://www.linkedin.com/in/brittanykelly/" rel="nofollow">LinkedIn Link</a>
+				</li>
+				<li class="list--twitter"><a href="https://www.twitter.com/compchimera" rel="nofollow">Twitter Link</a></li>
+				<li class="list--github"><a href="https://github.com/CompChimera" rel="nofollow">GitHub Link</a></li>
 			</ul>
 		</div>
 	</div>
