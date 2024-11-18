@@ -22,7 +22,7 @@
 				 */
 				do_action( 'twentyfifteen_credits' );
 			?>
-			<p>Child Theme by Brittany Kelly - 2018</p>
+			<p>Child Theme by Brittany Kelly - <?php echo date("Y"); ?></p>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->
 
